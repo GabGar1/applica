@@ -12,7 +12,7 @@
         />
       </q-toolbar>
       <div cass="q-px-lg q-pt-xl q-mb-md">
-        <div cass="text-h3">Gab App</div>
+        <div cass="text-h3">Applica</div>
         <div cass="text-subtitle1">{{ todaysDate }}</div>
       </div>
       <q-img src="/statics/montanhas.jpg" class="header-image absolute-top" />
@@ -34,29 +34,29 @@
         "
       >
         <q-list padding>
-          <q-item-label header> Lista de Compras </q-item-label>
+          <q-item-label header> Opções </q-item-label>
           <q-item to="/Alimentos" exact clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-jar" />
+              <q-icon name="fa-solid fa-children" />
             </q-item-section>
 
-            <q-item-section> Alimentos </q-item-section>
+            <q-item-section> Cadastro menor atendido </q-item-section>
           </q-item>
 
           <q-item to="/pets" exact active clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-bone" />
+              <q-icon name="fa-solid fa-clipboard" />
             </q-item-section>
 
-            <q-item-section> PETS </q-item-section>
+            <q-item-section> Cadastro de ocorrência </q-item-section>
           </q-item>
 
           <q-item to="/ProdutosLimpeza" exact clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-broom" />
+              <q-icon name="fa-solid fa-house-user" />
             </q-item-section>
 
-            <q-item-section> Produtos de Limpeza </q-item-section>
+            <q-item-section> Cadastro casa de acolhimento </q-item-section>
           </q-item>
 
           <q-item to="/SelfCare" exact clickable v-ripple>
@@ -66,23 +66,19 @@
 
             <q-item-section> Self Care </q-item-section>
           </q-item>
-
-          />
         </q-list>
       </q-scroll-area>
       <q-img
         class="absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
+        src="../statics/applicafundopreto.jpg"
         style="height: 150px"
       >
         <div class="absolute-bottom bg-transparent">
           <q-avatar size="56px" class="q-mb-sm">
-            <img
-              src="https://scontent.ffln5-1.fna.fbcdn.net/v/t1.6435-9/44926418_1885858548162516_5143205783428661248_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHGqvqCceuWPBD7T7Vmuo_gLwYaydGRZ68vBhrJ0ZFnrxhrWZOZu2TMQbFq-39xB7nPcokeffejK1ne6bj4jDyV&_nc_ohc=7JcrhLXu9FcAX-TUCpK&tn=zd5-MbPAsmd3wJwR&_nc_ht=scontent.ffln5-1.fna&oh=00_AT_fUbQcAqLHAg5mtrHj9ded_tLeZjzrTwv6FydW_HPThQ&oe=631870C5"
-            />
+            <img src="../statics/logoapplica.jpg" />
           </q-avatar>
-          <div class="text-weight-bold">Gabriel Garbrecht</div>
-          <div>@gabriel.garbrecht</div>
+          <div class="text-weight-bold">Nome Usuário</div>
+          <div>Permissão usuário (Cons, Cidadao)</div>
         </div>
       </q-img>
     </q-drawer>

@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header>
+    <q-header elevated>
       <q-toolbar>
         <q-btn
           flat
@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
+          @click="toggleLeftDrawer"
         />
 
         <q-toolbar-title> Applica </q-toolbar-title>
@@ -36,7 +36,7 @@
           <q-item-label header> Opções </q-item-label>
           <q-item to="/Cliente" exact clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="fa-solid fa-bone" />
+              <q-icon name="fa-solid fa-jar" />
             </q-item-section>
 
             <q-item-section> Cadastro Menor Atendido </q-item-section>
@@ -55,6 +55,12 @@
 
             <q-item-section> Cadastro Casa de Acolhimento </q-item-section>
           </q-item>
+
+          <EssentialLink
+            v-for="link in essentialLinks"
+            :key="link.title"
+            v-bind="link"
+          />
         </q-list>
       </q-scroll-area>
       <q-img
@@ -80,6 +86,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
@@ -126,26 +133,23 @@ const linksList = [
   },
 ];
 
-export default {
+export default defineComponent({
   name: "MainLayout",
+
+  components: {
+    EssentialLink,
+  },
 
   setup() {
     const leftDrawerOpen = ref(false);
 
     return {
+      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
     };
   },
-};
+});
 </script>
-<style lang="scss">
-.header-image {
-  height: 100%;
-  z-index: -1;
-  opacity: 0.2;
-  filter: grayscale(100%);
-}
-</style>
